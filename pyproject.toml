@@ -8,6 +8,10 @@ authors = [
 readme = "README.md"
 dependencies = [
     "tqdm",
+    "transformers",
+    "Pillow",
+    "torchvision",
+    "numpy"
 ]
 
 [project.optional-dependencies]
