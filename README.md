@@ -4,6 +4,11 @@ CLIP model to embed SignWriting images.
 
 Used in [signwriting-evaluation](https://github.com/sign-language-processing/signwriting-evaluation).
 
+Trained on [SignBank+](https://github.com/sign-language-processing/signbank-plus), 
+by correlating the SignWriting images with their corresponding texts.
+This does not guarantee that the embeddings are useful for lexical tasks like transcription, 
+and an empirical evaluation is needed. Preliminary results are promising (see below).
+
 ## Training a model
 
 ```bash

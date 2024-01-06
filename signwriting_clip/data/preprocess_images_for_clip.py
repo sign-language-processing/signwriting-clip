@@ -26,7 +26,7 @@ def process_image_clip(src_path: Path, dst_path: Path):
     new_img.save(dst_path)
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input-path", type=str, required=True)
     parser.add_argument("--output-path", type=str, required=True)
@@ -45,3 +45,7 @@ if __name__ == "__main__":
             continue
 
         process_image_clip(file, dst_path)
+
+
+if __name__ == "__main__":
+    main()
