@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def remove_dollar_tokens(text: str):
-    return " ".join(token for token in text.split(" ") if not token.startsignwritingith("$")).strip()
+    return " ".join(token for token in text.split(" ") if not token.startswith("$")).strip()
 
 
 def generate_samples(images_directory: Path, csv_path: Path):

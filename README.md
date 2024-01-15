@@ -2,12 +2,15 @@
 
 CLIP model to embed SignWriting images.
 
-Used in [signwriting-evaluation](https://github.com/sign-language-processing/signwriting-evaluation).
+Can be used in [signwriting-evaluation](https://github.com/sign-language-processing/signwriting-evaluation).
 
 Trained on [SignBank+](https://github.com/sign-language-processing/signbank-plus), 
 by correlating the SignWriting images with their corresponding texts.
 This does not guarantee that the embeddings are useful for lexical tasks like transcription, 
-and an empirical evaluation is needed. Preliminary results are promising (see below).
+and an empirical evaluation is needed.
+
+Preliminary results show that the model can be used for more semantic tasks, but not for lexical tasks.
+The model is hosted on [HuggingFace](https://huggingface.co/sign/signwriting-clip).
 
 ## Training a model
 
@@ -31,7 +34,7 @@ sbatch scripts/train_model.sh "$DATA_DIR"
 
 The original CLIP model encodes all SignWriting images as very similar embeddings,
 as evident by the distribution of cosine similarities between embeddings of random signs.
-The distribution is head-heavy, with most similarities being above 0.9.
+The distribution is head-heavy, with most similarities between 0.8 and 0.9.
 
 ![cosine similarity distribution for CLIP](assets/distribution/CLIP.png)
 
